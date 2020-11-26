@@ -28,7 +28,7 @@ def split(p) :
 def reverse(p) :
     return ''.join(['(' if x==')' else ')' for x in p])
 
-
+'''
 def solution(p):
     if p=='': return p
     right = True; balance=0
@@ -42,3 +42,4 @@ def solution(p):
                 return '('+solution(p[i+1:])+')'+''.join(list(map(lambda x:'(' if x==')' else ')',p[1:i]) ))
 
 list(map(lambda x:'(' if x==')' else ')',p[1:3]))
+'''

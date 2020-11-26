@@ -15,25 +15,11 @@ def solution(n, weak, dist):
     for weak in weaks :
         for dist in dists :
             check = weak[0]
-            for d in dist :
+            for i, d in enumerate(dist) :
                 check += d
                 if check >= weak[-1] :
-                    answer.append(dist.index(d))
+                    answer.append(i)
                     break
                 else :
                     check = [x for x in weak if x > check][0]
     return min(answer)+1 if answer else -1
-
-
-#n, weak, dist = 12, [1, 5, 6, 10], [1, 2, 3, 4]
-n, weak, dist = 12, [1, 3, 4, 9, 10], [3, 5, 7]
-#n, weak, dist = 12, [1, 3, 4, 9, 10], [1, 2]
-
-
-
-
-
-a = solution(n, weak, dist)
-
-a
-56789101114152025
