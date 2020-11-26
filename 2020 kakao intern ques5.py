@@ -49,10 +49,34 @@ def solution(n, path, order):
 
 print(solution(n, path, order))
 
+ 
 
-a = defaultdict()
-a[1] = 0
-a[2]  = 3
-a[]
-if 0 : print('s')
+'''
+def solution(n, path, order):
+    before = [0 for _ in range(n)]
+    after = [0 for _ in range(n)]
+    visit = [0 for _ in range(n)]
+    graph = {n: [] for n in range(n)}
+    
+    for a, b in path :
+        graph[a].append(b)
+        graph[b].append(a)
+        
+    for p, a in order :
+        if a == 0 : return False
+        before[a] = p
+    
+    visit[0] = 1
+    stack = graph[0]
+    while stack  :
+        node = stack.pop()
+        if visit[node] : continue
+        if not visit[before[node]] :
+            after[before[node]] = node
+            continue
+        visit[node] = 1
+        stack.extend(graph[node])
+        stack.append(after[node])
+    return True if sum(visit) == n else False
 
+'''
